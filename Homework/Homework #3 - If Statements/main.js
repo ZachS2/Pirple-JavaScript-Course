@@ -1,4 +1,5 @@
 //Logical Argument #1
+console.log ("Argument #1")
 const allMenAreMortal = true;
 const Socrates = "aMan";
 console.log("All men are mortal.")
@@ -8,10 +9,11 @@ if (Socrates == "aMan" && allMenAreMortal==true) {
 } 
 
 //Logical Argument #2 
+console.log ("Argument #2")
 const vanillaorChocolate = true;
 const notChocolate = "not";
 console.log("This cake is either vanilla or chocolate.")
 console.log("This cake is not chocolate.")
-if (Socrates == "not" && allMenAreMortal==true) {
+if (notChocolate == "not" && vanillaorChocolate==true) {
     console.log("Therefore, this cake is vanilla")
 }

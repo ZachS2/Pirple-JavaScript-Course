@@ -1,4 +1,4 @@
-let men = ["Alejandro", "Socrates", "Steve"];
+let men = ["Zachary", "Socrates", "Steve"];
 
 const isMortal = (name) => {
   let isManMortal = false;

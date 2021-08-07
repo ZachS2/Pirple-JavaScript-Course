@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>To-Do Lists</title>
+    <link rel="stylesheet" href="todo.css">
+  </head>
+  <body onload="startProjectCode()">
+    <div id="app">
+      <h1>To-Do Lists</h1>
+      <h2>Keep Track of To do Lists</h2>
+
+      <div id="intro" class="">
+        <p>
+          <a href="#" id="signup-button" class="button signup">Sign Up</a>
+          <a href="#" id="login-button" class="button login">Log In</a>
+        </p>
+      </div>
+
+      <div id="logged" class="hide">
+        <p>
+          Welcome,
+          <span id="loggedin-user-firstname">First</span>
+          <span id="loggedin-user-lastname">Last</span>
+        </p>
+        <a href="#" class="button" id="dashboard-button">Dashboard</a>
+        <a href="#" class="button" id="settings-button">Account Settings</a>
+        <a href="#" class="button logout" id="logout-button">Log Out</a>
+      </div>
+
+      <div id="signup" class="hide">
+        <h3>Sign Up</h3>
+        <form action="#" id="signup-form">
+          <label for="signup-first">
+            First Name<br>
+            <input type="text" id="signup-first">
+          </label>
+          <label for="signup-last">
+            Last Name<br>
+            <input type="text" id="signup-last">
+          </label>
+          <label for="signup-email">
+            Email<br>
+            <input type="email" id="signup-email">
+          </label>
+          <label for="signup-password">
+            Password<br>
+            <input type="password" id="signup-password">
+          </label>
+          <label for="signup-terms">
+            <input type="checkbox" id="signup-terms"> I agree to the <b>Terms of Use</b>
+          </label>
+          <button class="button">Sign Up</button>
+          <p id="signup-errors" class="error-message hide">There was an error</p>
+        </form>
+      </div>
+
+      <div id="login" class="hide">
+        <h3>Log In</h3>
+        <form action="#" id="login-form">
+          <label for="login-email">
+            Email<br>
+            <input type="email" id="login-email">
+          </label>
+          <label for="login-password">
+            Password<br>
+            <input type="password" id="login-password">
+          </label>
+          <button class="button" type="submit">Log In</button>
+          <p id="login-errors" class="error-message hide">There was an error</p>
+        </form>
+      </div>
+
+      <div id="dashboard" class="hide">
+        <h3>Dashboard</h3>
+
+        <ul id="dashboard-todo-lists">
+          <li><a href="#">Todo list</a></li>
+          <li><a href="#">Todo list</a></li>
+          <li><a href="#">Todo list</a></li>
+        </ul>
+
+        <br>
+
+        <a href="#" class="button" id="create-new-list">Create New To-Do List</a>
+      </div>
+
+      <div id="list" class="hide">
+        <h3 id="title-list">Todo list</h3>
+        <form action="#" id="change-title">
+          <input type="text" id="list-title" value="">
+          <p id="list-title-errors" class="error-message hide">There was an error</p>
+          <button class="button" type="submit">Change title</button>
+        </form>
+
+        <ul id="todo-list-items">
+          <li>item 1</li>
+          <li>item 2</li>
+          <li class="done">item done!</li>
+          <li>item 5</li>
+        </ul>
+
+        <form action="#" id="new-item-form">
+          <label for="list-new-item">
+            Add new item to the list
+            <input type="text" id="list-new-item">
+          </label>
+          <p id="new-item-errors" class="error-message hide">There was an error</p>
+          <button class="button" type="submit">Add to To-Do list</button>
+        </form>
+
+        <hr>
+      </div>
+
+      <div id="settings" class="hide">
+        <h3>Account Settings</h3>
+        <form action="#" id="settings-form">
+          <label for="settings-first">
+            First Name<br>
+            <input type="text" id="settings-first" value="first name">
+          </label>
+          <label for="settings-last">
+            Last Name<br>
+            <input type="text" id="settings-last" value="last name">
+          </label>
+          <label for="settings-email">
+            Email<br>
+            <input type="email" id="settings-email" value="account@server.com">
+          </label>
+          <label for="settings-password">
+            Password <small>(your password won't change if you leave this field empty)</small><br>
+            <input type="password" id="settings-password">
+          </label>
+          <p id="settings-errors" class="error-message hide">There was an error</p>
+          <button class="button login">Update account</button>
+        </form>
+      </div>
+
+    </div>
+
+    <script src="todo.js"></script>
+  </body>
+</html>
